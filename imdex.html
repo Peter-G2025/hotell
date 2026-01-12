@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Video Carousel with Overlay Divs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar πάντα πάνω -->
+  <header class="navbar">
+  <div class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="logo">
+    <h1>Nymia</h1>
+  </div>
+
+  <div class="btn">
+    <button><a href="">Book now</a></button>
+  </div>
+</header>
+
+<!-- Fullscreen Navigation -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-content">
+    <nav>
+      <a href="#">Experiences</a>
+      <a href="#">Events</a>
+      <a href="#">Private Stays</a>
+      <a href="#">Our story</a>
+    </nav>
+
+    <nav id="nav2">
+      <a href="#">Modify or cancel your booking</a>
+      <a href="#">About us</a>
+      <a href="#">Residences</a>
+      <a href="#">Press Room</a>
+      <a href="#">Shop Nymia hotel</a>
+      <a href="#">Contact us</a>
+    </nav>
+
+    
+  </div>
+
+</div>
+
+
+  <!-- Video Carousel -->
+  <div class="video-carousel">
+
+    <!-- Video 1 -->
+    <div class="slide">
+      <video class="carousel-video" src="videos/vid1.mp4" muted autoplay></video>
+      <div class="overlay">
+        <h2>Nymia mount hotel</h2>
+        <p>Destinations to discover, journey to remember</p>
+        <button>Button 1</button>
+      </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="slide">
+      <video class="carousel-video" src="videos/vid2.mp4" muted></video>
+      <div class="overlay">
+        <h2>Your journey waits</h2>
+        <p>All that missing is you</p>
+        <button>Button 2</button>
+      </div>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="slide">
+      <video class="carousel-video" src="videos/vid3.mp4" muted></video>
+      <div class="overlay">
+        <h2>Travelling in style</h2>
+        <p>Where will you go next</p>
+        <button>Button 3</button>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="services">
+    <div class="title">
+      <h1>Welcome to Nymia hotel</h1>
+      <p>Discover our services</p>
+    </div>
+    <div class="images">
+      <div class="imag1">
+        <img src="img/Swimming-Icon.jpg" alt="">
+        <p>The hotel has a huge open swimming pool with nice landscaped surrounding</p>
+      </div>
+      <div class="imag2">
+        <img src="img/bar.png" alt="">
+        <p>The hotel has a bar where you can drink a hot beverage</p>
+      </div>
+      <div class="imag3">
+        <img src="img/wifi.avif" alt="">
+        <p>All the hotel areas and in all rooms you can access wireless internet for free</p>
+      </div>
+      
+    </div>
+  </section>
+
+<section class="rooms-section">
+
+  <!-- ΜΟΝΟΚΛΙΝΟ -->
+  <div class="room-row">
+    <img src="img/mono (1).png" alt="" class="room-img large">
+
+    <div class="room-box">
+      <h3>ΜΟΝΟΚΛΙΝΟ</h3>
+      <p>Άνετο δωμάτιο για ένα άτομο</p>
+      <button>ΛΕΠΤΟΜΕΡΕΙΕΣ</button>
+    </div>
+
+    <img src="img/view1.webp" alt="" class="room-img small">
+  </div>
+
+  <!-- ΔΙΚΛΙΝΟ -->
+  <div class="room-row">
+    <img src="img/diplo.png" alt="" class="room-img large">
+
+    <div class="room-box">
+      <h3>ΔΙΚΛΙΝΟ</h3>
+      <p>Διπλό ή δύο μονά κρεβάτια</p>
+      <button>ΛΕΠΤΟΜΕΡΕΙΕΣ</button>
+    </div>
+
+    <img src="img/view2.jpg" class="room-img small">
+  </div>
+
+  <!-- ΤΡΙΚΛΙΝΟ -->
+  <div class="room-row">
+    <img src="img/triplo.png" alt="" class="room-img large">
+
+    <div class="room-box">
+      <h3>ΤΡΙΚΛΙΝΟ</h3>
+      <p>Ιδανικό για έως 3 άτομα</p>
+      <button>ΛΕΠΤΟΜΕΡΕΙΕΣ</button>
+    </div>
+
+    <img src="img/view3.jpg" alt="" class="room-img small">
+  </div>
+
+</section>
+
+
+
+
+
+
+  <section class="experiences" id="experiences">
+
+    <div class="logo1">
+        <h2 class="section-title">Experiences</h2>
+    </div>
+  
+
+  <div class="experiences-layout">
+
+    <!-- Αριστερό sticky menu -->
+    <aside class="experiences-menu">
+      <a href="#exp1">Culinary</a>
+      <a href="#exp2">Suites</a>
+      <a href="#exp3">Special Occasions</a>
+      <a href="#exp4">Sport and Andventure</a>
+      <a href="#exp5">For your Wellbeing</a>
+      <a href="#exp6">Family</a>
+    </aside>
+
+    <!-- Δεξί content -->
+    <div class="experiences-content">
+
+      <!-- CARD 1 -->
+      <div class="experience-card" id="exp1">
+        <img src="img/img1.png" alt="">
+        <p>At Nymia, gastronomy is at the heart of everything we do. Our chefs combine decades of international <br> expertise with extensive knowledge of local cuisines and cultures to offer a unique exploration of flavours..</p>
+        <button>Discover</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="experience-card" id="exp2">
+        <img src="img/img2.png" alt="">
+        <p>For pure luxury, look no further than our exclusive suites in the most desirable destinations. From dedicated <br> butlers and chauffeurs to private pools and rooftop terraces, every element of your stay will be taken care of <br> to both captivate and delight.</p>
+        <button>Discover</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="experience-card" id="exp3">
+        <img src="img/img3.png" alt="">
+        <p>Momentous occasions call for extra special places and extra special people to bring your vision to life. <br> Whether it’s an engagement, wedding or honeymoon, we will craft your celebration into a truly unforgettable <br> experience.</p>
+        <button>Discover</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="experience-card" id="exp4">
+        <img src="img/img4.png" alt="">
+        <p>Step into our spas in every corner of the world and indulge your senses in truly tranquil surroundings.<br> From steam baths to saunas and infinity pools to revitalising treatments, it’s all about giving you <br> the space to be you.</p>
+        <button>Discover</button>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="experience-card" id="exp5">
+        <img src="img/img5.png" alt="">
+        <p>Enhance your stay and give yourself a boost. Enjoy a spectacular range of sport and adventure experiences <br> at Kempinski. Choose winter activities in the Alps and other mountainous settings around the world,<br> or an array of watersports along picturesque coastlines.</p>
+        <button>Discover</button>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="experience-card" id="exp6">
+        <img src="img/img6.png" alt="">
+        <p>Escape and unwind with all the family at Kempinski hotels. No distractions, just precious time together <br> to explore and discover the stunning surroundings. All with warm-hearted hospitality, tantalising cuisine <br> and facilities designed with the littlest travellers in mind.</p>
+        <button>Discover</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <script src="java/script.js"></script>
+</body>
+</html>

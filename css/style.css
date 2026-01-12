@@ -1,0 +1,492 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  z-index: 1000;
+  transition: transform 0.4s ease;
+}
+
+
+
+/* Κρυφό state */
+.navbar.hide {
+  transform: translateY(-100%);}
+
+
+/* Hamburger button */
+.menu-btn {
+  width: 30px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.menu-btn span {
+  display: block;
+  height: 3px;
+  background: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.logo {
+  font-family: 'Courier New', Courier, monospace;
+  color:black;
+  font-size: 2rem;
+}
+
+.btn{
+    padding: 30px;
+}
+
+.btn a{
+    padding: 15px;
+    text-decoration: none;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.btn a:hover{
+    background-color: white;
+    color: black;
+    border: 0.5 solid black;
+}
+
+/* Video Carousel */
+.video-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Πιάνει όλη την οθόνη */
+  overflow: hidden;
+  margin-top: 0; /* Δεν χρειάζεται margin-top, navbar είναι fixed */
+}
+
+/* Κάθε slide */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+/* Ενεργό slide */
+.slide.active {
+  opacity: 1;
+}
+
+/* Video μέσα σε slide */
+.carousel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay για κάθε slide */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+.overlay h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.overlay button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Mobile First */
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .overlay h2 {
+    font-size: 2rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .overlay button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-overlay {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  z-index: 99;
+}
+
+/* Όταν είναι ενεργό */
+.menu-overlay.active {
+  transform: translateX(0);
+  
+}
+
+/* Περιεχόμενο δεξιά */
+.menu-content {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 50px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.menu-content nav a {
+  display: block;
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: black;
+  text-decoration: none;
+}
+
+#nav2{
+    padding-left: 30px;
+}
+
+.logo1{
+    justify-content: center;
+}
+
+.services{
+  width: 70%;
+  padding-left: 27%;
+}
+
+.title{
+  text-align: center;
+  padding-top: 25px;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.title h1{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.images{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  gap: 20px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 768px){
+  .services{
+    padding-left: 12%;
+  }
+
+  .title h1{
+    padding-left: 90px;
+    font-size: 2.4rem;
+  }
+}
+
+.rooms-section {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ΚΑΘΕ ΣΕΙΡΑ */
+.room-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ΦΩΤΟΓΡΑΦΙΕΣ */
+.room-img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.room-img.large {
+  height: 260px;
+}
+
+.room-img.small {
+  height: 220px;
+}
+
+/* ΚΟΥΤΙ ΚΕΙΜΕΝΟΥ */
+.room-box {
+  border: 1px solid #000;
+  padding: 30px;
+  text-align: center;
+}
+
+.room-box h3 {
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.room-box p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.room-box button {
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.room-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Κρατάμε το zoom μέσα */
+.room-row img {
+  will-change: transform;
+}
+
+/* Hover zoom */
+.room-row img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .room-row img:hover {
+    transform: none;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .room-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .room-img.large,
+  .room-img.small {
+    height: 220px;
+  }
+
+  .room-box {
+    padding: 25px 20px;
+  }
+}
+
+
+
+.images img{
+  width: 100px;
+  justify-content: center;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.images p{
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.experiences {
+  height: 100vh;
+  overflow: hidden; /* ΠΟΛΥ ΣΗΜΑΝΤΙΚΟ */
+  padding: 120px 60px;
+}
+
+.section-title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 60px;
+}
+
+/* Layout */
+.experiences-layout {
+  display: flex;
+  height: 100%;
+  gap: 60px;
+}
+
+
+/* Αριστερό menu */
+.experiences-menu {
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.experiences-menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Δεξί content */
+.experiences-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.experiences-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.experiences-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+
+
+/* Κάρτα */
+.experience-card img {
+justify-content: center;
+  width: 70%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.experience-card p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.experience-card button {
+  padding: 15px 30px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .experiences {
+    height: auto;
+    overflow: visible;
+  }
+
+  .experiences-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .experiences-content {
+    overflow: visible;
+  }
+
+  .experiences-menu{
+    display: none;
+  }
+
+}
